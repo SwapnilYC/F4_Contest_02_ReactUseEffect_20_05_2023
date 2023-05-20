@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
-import TableContent from "./Component/TableContent";
+import RowContent from "./Component/RowContent";
 
 function App() {
   const [rowData, setRowData] = useState([]);
@@ -59,7 +59,7 @@ function App() {
         <tbody>
           {/* {table rows will be append here} */}
           {rowData.map((coinDataRow) => {
-            <TableContent key={coinDataRow.id} details={coinDataRow}></TableContent>
+            <RowContent key={coinDataRow.id} details={coinDataRow}></RowContent>
           })}
         </tbody>
       </table>

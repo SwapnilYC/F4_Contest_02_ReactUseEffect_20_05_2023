@@ -1,7 +1,7 @@
 import React from "react";
 
-function TableContent({ details }) {
-  console.log('Inside tablecontent.js');
+function RowContent({ details }) {
+  console.log('Inside Row content.js');
   return (
     <tr>
       <td><img src={details.image} alt={details.name} /></td>
@@ -15,4 +15,4 @@ function TableContent({ details }) {
   );
 }
 
-export default TableContent;
+export default RowContent;
