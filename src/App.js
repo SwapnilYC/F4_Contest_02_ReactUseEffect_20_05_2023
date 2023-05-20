@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 // import axios from 'axios';
 import RowContent from "./RowContent";
 
-
 function App() {
   const [rowData, setRowData] = useState([]);
   let api = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false";
@@ -34,14 +33,13 @@ function App() {
           <th>Symbol</th>
           <th>Current Price</th>
           <th>Total Volume</th>
+          <th>Market Cap Change</th>
           <th>Total Market Cap($)</th>
-          <th>Market Cap Change In Percentage</th>
         </tr>
       </thead>
       <tbody>
         {rowData.map(coinDataRow => {
-          // console.log(coinDataRow);
-          <RowContent key={coinDataRow.id} details={coinDataRow}></RowContent>
+          return <RowContent key={coinDataRow.id} details={coinDataRow}></RowContent>
         })}
       </tbody>
     </table>
